@@ -18,7 +18,6 @@ class ArrayListTest {
     @org.junit.jupiter.api.Test
     void add() {
         list.add(50);
-
         assertEquals(1, list.size());
     }
 
