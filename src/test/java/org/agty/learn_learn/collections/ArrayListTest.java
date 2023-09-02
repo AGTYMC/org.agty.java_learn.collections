@@ -65,7 +65,7 @@ class ArrayListTest {
     @Test
     void resizeArray() {
         /*По умолчанию хранит 5 элементов, далее удваивается массив*/
-        assertEquals(5, list.sizeCollectionArray());
+        assertEquals(5, list.getMaxListLength());
 
         /*Добавляем 7 элементов*/
         list.add(1);
@@ -77,6 +77,16 @@ class ArrayListTest {
         list.add(7);
 
         /*Проверяем*/
-        assertEquals(10, list.sizeCollectionArray());
+        assertEquals(10, list.getMaxListLength());
+
+        /*Добавляем еще 5 элементов*/
+        list.add(8);
+        list.add(9);
+        list.add(10);
+        list.add(11);
+        list.add(12);
+
+        /*Проверяем*/
+        assertEquals(20, list.getMaxListLength());
     }
 }

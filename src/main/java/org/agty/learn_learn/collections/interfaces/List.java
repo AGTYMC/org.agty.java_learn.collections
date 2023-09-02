@@ -38,5 +38,5 @@ public interface List {
      *
      * @return int Размер.
      */
-    int sizeCollectionArray();
+    int getMaxListLength();
 }

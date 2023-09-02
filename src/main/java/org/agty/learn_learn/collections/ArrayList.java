@@ -15,7 +15,7 @@ public class ArrayList implements List {
     private int nowListLength = 0;
 
     /**Массив объектов коллекции*/
-    private Object[] list = new Object[ maxListLenght ];
+    private Element[] list = new Element[ maxListLenght ];
 
     /**
      * Элемент коллекции
@@ -91,7 +91,7 @@ public class ArrayList implements List {
      *
      * @return int Размер.
      */
-    public int sizeCollectionArray() {
-        return list.length;
+    public int getMaxListLength() {
+        return maxListLenght;
     }
 }
