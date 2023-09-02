@@ -3,15 +3,29 @@ import org.agty.learn_learn.collections.list.interfaces.List;
 
 import java.util.Arrays;
 
+/**
+ * Не связанная коллекция типа Array
+ */
 public class ArrayList implements List {
+
+    /**Максимальный размер коллекции.*/
     private int maxListLenght = 5;
 
+    /**Текущий размер коллекции.*/
     private int nowListLength = 0;
 
+    /**Массив объектов коллекции*/
     private Object[] list = new Object[ maxListLenght ];
 
+    /**
+     * Элемент коллекции
+     */
     private class Element implements org.agty.learn_learn.collections.list.interfaces.Element {
         private Object value;
+
+        Element(Object o) {
+            setValue(o);
+        }
 
         @Override
         public Object getValue() {
@@ -24,8 +38,12 @@ public class ArrayList implements List {
         }
     }
 
+    /**
+     * Добавляет объект в коллекцию
+     * @param o Объект.
+     */
     public void add(Object o) {
-        list[ nowListLength ++ ] = o;
+        list[ nowListLength ++ ] = new Element(o);
 
         if (nowListLength == maxListLenght) {
             maxListLenght = maxListLenght * 2;
@@ -33,11 +51,38 @@ public class ArrayList implements List {
         }
     }
 
+    /**
+     * Возвращает объект коллекции
+     *
+     * @param index Индекс.
+     * @return Object Объект.
+     */
     public Object get(int index) {
-        return list[ index ];
+        return ((Element) list[ index ]).getValue();
     }
 
+    /**
+     * Размер коллекции.
+     *
+     * @return int Размер.
+     */
     public int size() {
         return nowListLength;
+    }
+
+    /**
+     * Удаляет из массива объкт.
+     *
+     * @param index Индекс.
+     */
+    public void remove(int index) {
+
+        for (int i = 0; i < list.length; i++) {
+            if (i <= index) continue;
+            list[ i - 1 ] = list[ i ];
+        }
+
+        list = Arrays.copyOf(list, nowListLength - 1);
+        nowListLength--;
     }
 }
