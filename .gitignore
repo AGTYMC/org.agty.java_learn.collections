@@ -1,5 +1,6 @@
 .idea
 collections.iml
+.gitignore
 
 target/
 !.mvn/wrapper/maven-wrapper.jar
