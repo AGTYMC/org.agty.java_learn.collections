@@ -61,4 +61,22 @@ class ArrayListTest {
         /*Сравниваем результаты*/
         assertEquals("Obj", list.get(2).toString());
     }
+
+    @Test
+    void resizeArray() {
+        /*По умолчанию хранит 5 элементов, далее удваивается массив*/
+        assertEquals(5, list.sizeArray());
+
+        /*Добавляем 7 элементов*/
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        list.add(5);
+        list.add(6);
+        list.add(7);
+
+        /*Проверяем*/
+        assertEquals(10, list.sizeArray());
+    }
 }

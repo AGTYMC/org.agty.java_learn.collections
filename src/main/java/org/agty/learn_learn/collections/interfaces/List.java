@@ -28,7 +28,15 @@ public interface List {
 
     /**
      * Удаление объекта из коллекции.
+     *
      * @param index Индекс.
      */
     void remove(int index);
+
+    /**
+     * Возвращает размер массива коллекции.
+     *
+     * @return int Размер.
+     */
+    int sizeArray();
 }

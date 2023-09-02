@@ -52,7 +52,7 @@ public class ArrayList implements List {
     }
 
     /**
-     * Возвращает объект коллекции
+     * Возвращает объект коллекции.
      *
      * @param index Индекс.
      * @return Object Объект.
@@ -84,5 +84,14 @@ public class ArrayList implements List {
 
         list = Arrays.copyOf(list, nowListLength - 1);
         nowListLength--;
+    }
+
+    /**
+     * Размер массива коллекции.
+     *
+     * @return int Размер.
+     */
+    public int sizeArray() {
+        return list.length;
     }
 }
