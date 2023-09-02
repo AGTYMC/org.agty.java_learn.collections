@@ -91,7 +91,7 @@ public class ArrayList implements List {
      *
      * @return int Размер.
      */
-    public int sizeArray() {
+    public int sizeCollectionArray() {
         return list.length;
     }
 }
