@@ -1,5 +1,5 @@
-package org.agty.learn_learn.collections.list;
-import org.agty.learn_learn.collections.list.interfaces.List;
+package org.agty.learn_learn.collections;
+import org.agty.learn_learn.collections.interfaces.List;
 
 import java.util.Arrays;
 
@@ -20,7 +20,7 @@ public class ArrayList implements List {
     /**
      * Элемент коллекции
      */
-    private class Element implements org.agty.learn_learn.collections.list.interfaces.Element {
+    private class Element implements org.agty.learn_learn.collections.interfaces.Element {
         private Object value;
 
         Element(Object o) {

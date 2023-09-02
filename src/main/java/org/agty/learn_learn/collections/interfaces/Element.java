@@ -1,4 +1,4 @@
-package org.agty.learn_learn.collections.list.interfaces;
+package org.agty.learn_learn.collections.interfaces;
 
 /**
  * Интерфейс внутреннего класса для простого элемента коллекциию.

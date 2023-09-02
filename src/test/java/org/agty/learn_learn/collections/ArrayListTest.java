@@ -1,4 +1,4 @@
-package org.agty.learn_learn.collections.list;
+package org.agty.learn_learn.collections;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
