@@ -58,7 +58,7 @@ public class ArrayList implements List {
      * @return Object Объект.
      */
     public Object get(int index) {
-        return ((Element) list[ index ]).getValue();
+        return list[ index ].getValue();
     }
 
     /**
@@ -68,6 +68,15 @@ public class ArrayList implements List {
      */
     public int size() {
         return nowListLength;
+    }
+
+    /**
+     * Размер массива коллекции.
+     *
+     * @return int Размер.
+     */
+    public int getMaxListLength() {
+        return maxListLenght;
     }
 
     /**
@@ -84,14 +93,5 @@ public class ArrayList implements List {
 
         list = Arrays.copyOf(list, nowListLength - 1);
         nowListLength--;
-    }
-
-    /**
-     * Размер массива коллекции.
-     *
-     * @return int Размер.
-     */
-    public int getMaxListLength() {
-        return maxListLenght;
     }
 }
