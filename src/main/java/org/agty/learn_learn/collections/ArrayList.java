@@ -86,12 +86,15 @@ public class ArrayList implements List {
      */
     public void remove(int index) {
 
-        for (int i = 0; i < list.length; i++) {
-            if (i <= index) continue;
+        //TODO: Проверить если коллекция пустая, если это единственный элемент, если это последний элемент.
+        //TODO: Заменить создание через copyOf() на обнуление последних элементов, так как массив динамически расширяется и необходимость
+        //TODO: в его пересоздании это лишняя работа и память.
+        for (int i = (index + 1); i < list.length; i++) {
             list[ i - 1 ] = list[ i ];
         }
 
         list = Arrays.copyOf(list, nowListLength - 1);
         nowListLength--;
+
     }
 }
