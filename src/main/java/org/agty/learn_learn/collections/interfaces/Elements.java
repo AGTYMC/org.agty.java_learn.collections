@@ -3,7 +3,7 @@ package org.agty.learn_learn.collections.interfaces;
 /**
  * Интерфейс внутреннего класса для простого элемента коллекциию.
  */
-public interface Element {
+public interface Elements {
 
     /**
      * Получает объект элемента.
